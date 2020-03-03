@@ -1,10 +1,11 @@
 #include <Servo.h>
 const int SERVOPIN = 9;
 const int POTPIN = A0;
+int plaats = 1;
 
 Servo servo;
 
-int delay_time = 200;
+int delay_time = 20;
 unsigned long int previousMillis;
 
 void setup() {
@@ -12,12 +13,17 @@ void setup() {
   servo.attach(SERVOPIN);
   pinMode(POTPIN, INPUT);
 }
-
 void loop() {
+  int richting = meetRichting();
   unsigned long int currentMillis = millis();
   if (currentMillis >= previousMillis + delay_time) {
     previousMillis = currentMillis;
-    servo.write(meetRichting());
+    if(plaats > richting){
+      plaats--;
+    }else if(plaats < richting){
+      plaats++;
+    }
+    servo.write(plaats);
   }
 }
 
