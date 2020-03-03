@@ -1,0 +1,29 @@
+#include <Servo.h>
+const int SERVOPIN = 9;
+const int POTPIN = A0;
+
+Servo servo;
+
+int delay_time = 200;
+unsigned long int previousMillis;
+
+void setup() {
+  Serial.begin(9600);
+  servo.attach(SERVOPIN);
+  pinMode(POTPIN, INPUT);
+}
+
+void loop() {
+  unsigned long int currentMillis = millis();
+  if (currentMillis >= previousMillis + delay_time) {
+    previousMillis = currentMillis;
+    servo.write(meetRichting());
+  }
+}
+
+
+int meetRichting() {
+  int stand = analogRead(POTPIN);
+  stand = stand / float(5.7);
+  return stand;
+}
