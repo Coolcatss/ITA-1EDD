@@ -1,3 +1,4 @@
+```.c
 #include <Servo.h>
 const int SERVOPIN = 9;
 const int POTPIN = A0;
@@ -27,3 +28,4 @@ int meetRichting() {
   stand = stand / float(5.7);
   return stand;
 }
+```
