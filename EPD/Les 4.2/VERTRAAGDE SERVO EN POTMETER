@@ -1,4 +1,4 @@
-```.c
+```
 #include <Servo.h>
 const int SERVOPIN = 9;
 const int POTPIN = A0;
