@@ -18,12 +18,14 @@ void loop() {
   unsigned long int currentMillis = millis();
   if (currentMillis >= previousMillis + delay_time) {
     previousMillis = currentMillis;
-    if(plaats > richting){
-      plaats--;
-    }else if(plaats < richting){
-      plaats++;
+    if (plaats != richting) {
+      if (plaats > richting) {
+        plaats--;
+      } else if (plaats < richting) {
+        plaats++;
+      }
+      servo.write(plaats);
     }
-    servo.write(plaats);
   }
 }
 
