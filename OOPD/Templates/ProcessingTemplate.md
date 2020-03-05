@@ -19,7 +19,9 @@ Nu je je path hebt gebuild kun je Processing gebruiken in Eclipse Wel moet je no
 </p>
 
 ## Template
-<p>Hieronder staat wat start-code voor als je geen zin hebt om te typen.</p>
+<p>Hieronder staat wat start-code voor als je geen zin hebt om te typen.
+Vergeet niet om in PApplet.main de package naam in te voeren.
+</p>
 
 ```java
 
@@ -28,7 +30,7 @@ import processing.core.PApplet;
 public class App extends PApplet {
 
 	public static void main(String[] args) {
-
+		PApplet.main("//packageName".App");
 	}
 
 	public void settings() {
