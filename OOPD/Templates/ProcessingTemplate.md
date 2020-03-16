@@ -11,7 +11,7 @@ Hier laat ik zien hoe je processing in Eclipse kan gebruiken.
 	<li>In het linker venster druk op het pijltje omlaag.</li>
 	<li>Selecteer Core.</li>
 	<li>Klik op Finish</li>
-	<li>In je Hierarchy right-click op Library</li>
+	<li>In je Hierarchy unfold core en right-click op Library</li>
 	<li>Klik op Build path.</li>
 </ol>
 <p>
